@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SnowClothes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/snowclothes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ClothingStore.styles.css" asp-append-version="true" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <script>
+        const scrollEffectsCSS = `
+            .navbar.sticky {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            #backToTop {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background: var(--winter-blue);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: none;
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+
+            #backToTop:hover {
+                background: var(--deep-blue);
+                transform: translateY(-2px);
+            }
+
+            #scrollProgress {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 3px;
+                background: var(--winter-blue);
+                z-index: 1001;
+                transition: width 0.1s ease;
+            }
+
+            .fade-on-scroll {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.6s ease;
+            }
+
+            .fade-on-scroll.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .categories-section.compact {
+                transform: scale(0.9);
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+        `;
+        const scrollStyle = document.createElement('style');
+        scrollStyle.textContent = scrollEffectsCSS;
+        Document.head.appendChild(scrollStyle);
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="container">
+                <div class="top-header-content">
+                    <div class="top-left">
+                        <span><i class="fas fa-snowflake"></i> Chào mừng đến với SnowClothes</span>
+                    </div>
+                    <div class="top-right">
+                        <span><i class="fas fa-phone"></i> Hotline: 1900-1234</span>
+                        <span><i class="fas fa-envelope"></i> support@snowclothes.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo-section">
+                        <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-snowflake logo-icon"></i>
+                            <span class="logo-text">Snow<span class="logo-accent">Clothes</span></span>
+                        </a>
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="search-section">
+                        <form method="get" asp-controller="Home" asp-action="Index" class="search-form">
+                            <div class="search-input-group">
+                                <input type="text" name="searchTerm" value="@ViewContext.HttpContext.Request.Query["searchTerm"]"
+                                       placeholder="Tìm kiếm sản phẩm thời trang..." class="search-input">
+                                <input type="hidden" name="categoryId" value="@ViewContext.HttpContext.Request.Query["categoryId"]">
+                                <button type="submit" class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- User Actions -->
+                    <div class="user-actions">
+                        <div class="cart-section">
+                            <a href="#" class="cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="user-menu dropdown">
+                                <button class="user-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user"></i>
+                                    <span>@User.Identity.Name</span>
+                                </button>
+                                <ul class="dropdown-menu user-dropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Thông tin cá nhân</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-box"></i> Đơn hàng của tôi</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-heart"></i> Yêu thích</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline w-100">
+                                            <button type="submit" class="dropdown-item logout-btn">
+                                                <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="auth-buttons">
+                                <a class="auth-btn login-btn" asp-controller="Account" asp-action="Login">
+                                    <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                                </a>
+                                <a class="auth-btn register-btn" asp-controller="Account" asp-action="Register">
+                                    <i class="fas fa-user-plus"></i> Đăng ký
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-navigation">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i> Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="filterByCategory('all')">
+                            <i class="fas fa-th-large"></i> Tất cả sản phẩm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="filterByCategory('sale')">
+                            <i class="fas fa-fire"></i> Sale
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">
+                            <i class="fas fa-info-circle"></i> Về chúng tôi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer" style="margin-bottom: -200px;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-snowflake"></i> SnowClothes</h4>
+                    <p>Thời trang chất lượng cao với phong cách hiện đại, mang đến sự tự tin cho bạn trong mọi hoàn cảnh.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Dịch vụ khách hàng</h5>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Về SnowClothes</h5>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Liên hệ</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone"></i> 1900-1234</p>
+                        <p><i class="fas fa-envelope"></i> support@snowclothes.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 SnowClothes. Tất cả quyền được bảo lưu.
+                </div>
+                <div class="payment-methods">
+                    <span>Phương thức thanh toán:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/snowclothes.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
