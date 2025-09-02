@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "ContainingType": "ClothingStore.Controllers.AuthApiController",
+    "Method": "Login",
+    "RelativePath": "api/AuthApi/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ClothingStore.ViewModels.Account.LoginViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClothingStore.Controllers.AuthApiController",
+    "Method": "Register",
+    "RelativePath": "api/AuthApi/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ClothingStore.ViewModels.Account.RegisterViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClothingStore.Controllers.AuthApiController",
+    "Method": "Test",
+    "RelativePath": "api/AuthApi/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

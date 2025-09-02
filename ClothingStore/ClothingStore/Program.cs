@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using ClothingStore.Models;
 using ClothingStore.Services;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,25 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ClothingStoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Add JWT Authentication
+var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+var secretKey = jwtSettings["SecretKey"];
+var key = Encoding.UTF8.GetBytes(secretKey);
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidateAudience = true,
+            ValidAudience = jwtSettings["Audience"],
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
 // Thêm Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -20,6 +42,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
     });
 
+
 // Thêm Session (cần cho reset password token)
 builder.Services.AddSession(options =>
 {
@@ -30,8 +53,10 @@ builder.Services.AddSession(options =>
 
 // Thêm Email Service
 builder.Services.AddScoped<IEmailService, EmailService>();
-
+// Add services
+builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -51,7 +76,8 @@ app.UseRouting();
 app.UseSession(); // Phải đặt trước UseAuthentication
 app.UseAuthentication(); // Phải đặt trước UseAuthorization
 app.UseAuthorization();
-
+// Map API controllers
+app.MapControllers();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,584 @@
+﻿@model ClothingStore.ViewModels.User.UserProfileViewModel
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+}
+
+<div class="user-profile-page">
+    <!-- Header với thông tin user -->
+    <div class="user-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                    <div class="avatar-edit">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <h1>@Model.FullName</h1>
+                    <p>@Model.Email</p>
+                    <span class="membership-badge">
+                        <i class="fas fa-crown"></i> @Model.MembershipLevel Member
+                    </span>
+                    <div class="user-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">@Model.TotalOrders</span>
+                            <span class="stat-label">Đơn hàng</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">@Model.TotalSpent.ToString("N0")₫</span>
+                            <span class="stat-label">Tổng chi tiêu</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">@((DateTime.Now - Model.JoinDate).Days)</span>
+                            <span class="stat-label">Ngày thành viên</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="profile-layout">
+            <!-- Sidebar Menu -->
+            <div class="profile-sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-avatar">@Model.FullName.Substring(0, 1)</div>
+                    <div>
+                        <div class="sidebar-name">@Model.FullName</div>
+                        <div class="sidebar-email">@Model.Email</div>
+                    </div>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <a href="@Url.Action("Profile", "User")" class="menu-link active">
+                            <i class="fas fa-user menu-icon"></i>
+                            <span>Thông tin cá nhân</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="@Url.Action("Orders", "User")" class="menu-link">
+                            <i class="fas fa-shopping-bag menu-icon"></i>
+                            <span>Đơn hàng của tôi</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-heart menu-icon"></i>
+                            <span>Sản phẩm yêu thích</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-map-marker-alt menu-icon"></i>
+                            <span>Địa chỉ của tôi</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-credit-card menu-icon"></i>
+                            <span>Thẻ thanh toán</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-bell menu-icon"></i>
+                            <span>Thông báo</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-cog menu-icon"></i>
+                            <span>Cài đặt tài khoản</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="profile-content">
+                <div class="content-header">
+                    <h2 class="content-title">Thông tin cá nhân</h2>
+                    <a href="@Url.Action("EditProfile", "User")" class="edit-btn">
+                        <i class="fas fa-edit"></i>
+                        Chỉnh sửa
+                    </a>
+                </div>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <div class="profile-body">
+                    <!-- Info Cards -->
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <i class="fas fa-shopping-bag card-icon"></i>
+                            <div class="card-value">@Model.TotalOrders</div>
+                            <div class="card-label">Tổng đơn hàng</div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-coins card-icon"></i>
+                            <div class="card-value">@Model.TotalSpent.ToString("N0")₫</div>
+                            <div class="card-label">Tổng chi tiêu</div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-calendar card-icon"></i>
+                            <div class="card-value">@Model.JoinDate.ToString("dd/MM/yyyy")</div>
+                            <div class="card-label">Ngày tham gia</div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Form -->
+                    <div class="profile-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Họ và tên</label>
+                                <input type="text" class="form-input" value="@Model.FullName" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" value="@Model.Email" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-input" value="@Model.Phone" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Vai trò</label>
+                                <input type="text" class="form-input" value="@Model.Role" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Ngày tham gia</label>
+                                <input type="text" class="form-input" value="@Model.JoinDate.ToString("dd/MM/yyyy")" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Cấp độ thành viên</label>
+                                <input type="text" class="form-input" value="@Model.MembershipLevel" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .user-profile-page {
+        background: var(--light-gray);
+        min-height: 100vh;
+    }
+
+    .user-header {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .user-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .user-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: var(--snow-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--winter-blue);
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .avatar-edit {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        background: var(--winter-blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .avatar-edit:hover {
+        transform: scale(1.1);
+        background: var(--deep-blue);
+    }
+
+    .user-info h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .user-stats {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: block;
+        color: var(--frost-blue);
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .membership-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .main-container {
+        max-width: 1200px;
+        margin: -50px auto 2rem;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 3;
+    }
+
+    .profile-layout {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+    }
+
+    .profile-sidebar {
+        background: var(--snow-white);
+        border-radius: 12px;
+        padding: 0;
+        box-shadow: var(--shadow-light);
+        height: fit-content;
+        position: sticky;
+        top: 2rem;
+    }
+
+    .sidebar-header {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--frost-blue);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sidebar-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .sidebar-name {
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .sidebar-email {
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+
+    .sidebar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-item {
+        border-bottom: 1px solid var(--ice-blue);
+    }
+
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .menu-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        color: var(--text-light);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .menu-link:hover, .menu-link.active {
+        background: var(--ice-blue);
+        color: var(--winter-blue);
+        border-right: 3px solid var(--winter-blue);
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        width: 20px;
+        text-align: center;
+        color: var(--winter-blue);
+    }
+
+    .profile-content {
+        background: var(--snow-white);
+        border-radius: 12px;
+        box-shadow: var(--shadow-light);
+    }
+
+    .content-header {
+        padding: 2rem;
+        border-bottom: 1px solid var(--ice-blue);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+    }
+
+    .edit-btn {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+
+    .edit-btn:hover {
+        background: var(--deep-blue);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+        text-decoration: none;
+        color: var(--snow-white);
+    }
+
+    .profile-body {
+        padding: 2rem;
+    }
+
+    .info-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-card {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-heavy);
+    }
+
+    .info-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .info-card:nth-child(2) {
+        background: var(--gradient-secondary);
+        color: var(--deep-blue);
+    }
+
+    .info-card:nth-child(3) {
+        background: linear-gradient(135deg, var(--frost-blue), var(--winter-blue));
+    }
+
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        opacity: 0.9;
+    }
+
+    .card-value {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+    }
+
+    .card-label {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .profile-form {
+        background: var(--ice-blue);
+        border-radius: 12px;
+        padding: 2rem;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--deep-blue);
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 2px solid var(--frost-blue);
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: var(--snow-white);
+        color: var(--text-dark);
+    }
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--winter-blue);
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    }
+
+    .form-input[readonly] {
+        background: #f8f9fa;
+        color: var(--text-light);
+        cursor: not-allowed;
+    }
+
+    .alert {
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .alert-success {
+        background: rgba(72, 187, 120, 0.1);
+        color: var(--success-green);
+        border: 1px solid rgba(72, 187, 120, 0.3);
+    }
+
+    @@media (max-width: 992px) {
+        .profile-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .user-stats {
+            justify-content: center;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .info-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .main-container {
+            margin-top: -20px;
+            padding: 0 1rem;
+        }
+    }
+
+    @@media (max-width: 576px) {
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            font-size: 2rem;
+        }
+
+        .user-info h1 {
+            font-size: 1.5rem;
+        }
+
+        .content-header {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+</style>

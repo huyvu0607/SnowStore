@@ -17,6 +17,14 @@ namespace ClothingStore.Controllers
             _context = context;
         }
 
+        // Thêm action này để test JWT
+        public IActionResult TestJwt()
+        {
+            return PhysicalFile(
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "test-jwt.html"),
+                "text/html"
+            );
+        }
         public async Task<IActionResult> Index(int? categoryId, string searchTerm)
         {
             // Lấy danh sách categories

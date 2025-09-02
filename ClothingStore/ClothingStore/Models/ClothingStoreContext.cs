@@ -29,6 +29,11 @@ public partial class ClothingStoreContext : DbContext
 
     public virtual DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
 
+    public virtual DbSet<Order> Orders { get; set; }
+
+    public virtual DbSet<OrderItem> OrderItems { get; set; }
+
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=DESKTOP-I957D0S;Database=ClothingStore;Trusted_Connection=True;TrustServerCertificate=True;");

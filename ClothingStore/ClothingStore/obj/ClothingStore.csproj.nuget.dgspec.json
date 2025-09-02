@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dự Án riêng\\ClothingStore\\ClothingStore\\ClothingStore.csproj": {}
+    "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj": {}
   },
   "projects": {
-    "D:\\Dự Án riêng\\ClothingStore\\ClothingStore\\ClothingStore.csproj": {
+    "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dự Án riêng\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
+        "projectUniqueName": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
         "projectName": "ClothingStore",
-        "projectPath": "D:\\Dự Án riêng\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
+        "projectPath": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
         "packagesPath": "C:\\Users\\Huywill\\.nuget\\packages\\",
-        "outputPath": "D:\\Dự Án riêng\\ClothingStore\\ClothingStore\\obj\\",
+        "outputPath": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Huywill\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.3.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -65,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             }
           },
           "imports": [
