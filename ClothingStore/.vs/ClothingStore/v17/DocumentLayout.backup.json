@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\user\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\user\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\clothingstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\clothingstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\user\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\user\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\models\\clothingstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\viewmodels\\user\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\viewmodels\\user\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,10 +123,6 @@
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\clothingstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\clothingstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\utils\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\utils\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -137,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\wwwroot\\js\\snowclothes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\wwwroot\\js\\snowclothes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|solutionrelative:clothingstore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A5C4A9-2DA7-41C4-B366-1DE1809A9770}|ClothingStore\\ClothingStore.csproj|d:\\d\u1EF1 \u00E1n ri\u00EAng\\snowstore\\snowstore\\clothingstore\\clothingstore\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -233,16 +245,70 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDetail.cshtml",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\OrderDetail.cshtml",
+              "RelativeDocumentMoniker": "ClothingStore\\Views\\User\\OrderDetail.cshtml",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\OrderDetail.cshtml",
+              "RelativeToolTip": "ClothingStore\\Views\\User\\OrderDetail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T14:48:02.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ClothingStore\\Models\\Category.cs",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Category.cs",
+              "RelativeToolTip": "ClothingStore\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T11:37:21.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ProductImage.cs",
+              "RelativeDocumentMoniker": "ClothingStore\\Models\\ProductImage.cs",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ProductImage.cs",
+              "RelativeToolTip": "ClothingStore\\Models\\ProductImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T11:37:29.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClothingStore.csproj",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
+              "RelativeDocumentMoniker": "ClothingStore\\ClothingStore.csproj",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
+              "RelativeToolTip": "ClothingStore\\ClothingStore.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-02T09:42:16.227Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "ClothingStore\\Models\\OrderItem.cs",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\OrderItem.cs",
-              "RelativeToolTip": "ClothingStore\\Models\\OrderItem.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
+              "RelativeToolTip": "ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:47:05.918Z",
+              "WhenOpened": "2025-09-02T10:23:27.327Z",
               "EditorCaption": ""
             },
             {
@@ -253,53 +319,10 @@
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\OrderItemViewModel.cs",
               "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\OrderItemViewModel.cs",
               "RelativeToolTip": "ClothingStore\\ViewModels\\User\\OrderItemViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T10:26:07.714Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "ClothingStore\\Models\\Category.cs",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Category.cs",
-              "RelativeToolTip": "ClothingStore\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:37:21.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductImage.cs",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ProductImage.cs",
-              "RelativeDocumentMoniker": "ClothingStore\\Models\\ProductImage.cs",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ProductImage.cs",
-              "RelativeToolTip": "ClothingStore\\Models\\ProductImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:37:29.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ClothingStore\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ClothingStore\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAJ4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-01T16:57:10.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
@@ -309,7 +332,7 @@
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\OrderDetailViewModel.cs",
               "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\OrderDetailViewModel.cs",
               "RelativeToolTip": "ClothingStore\\ViewModels\\User\\OrderDetailViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T10:25:48.409Z",
               "EditorCaption": ""
@@ -317,6 +340,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClothingStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClothingStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowJAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T16:57:10.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ClothingStore\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ClothingStore\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwIkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T16:40:14.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "ClothingStore\\Models\\OrderItem.cs",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\OrderItem.cs",
+              "RelativeToolTip": "ClothingStore\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T11:47:05.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ClothingStoreContext.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ClothingStoreContext.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\ClothingStoreContext.cs",
@@ -324,12 +385,11 @@
               "RelativeToolTip": "ClothingStore\\Models\\ClothingStoreContext.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAmwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:46:39.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:46:39.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "ClothingStoreContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Migrations\\ClothingStoreContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Migrations\\ClothingStoreContextModelSnapshot.cs",
@@ -337,12 +397,11 @@
               "RelativeToolTip": "ClothingStore\\Migrations\\ClothingStoreContextModelSnapshot.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:54:00.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T11:54:00.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "20250901164812_AddUserTable.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Migrations\\20250901164812_AddUserTable.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Migrations\\20250901164812_AddUserTable.cs",
@@ -350,12 +409,11 @@
               "RelativeToolTip": "ClothingStore\\Migrations\\20250901164812_AddUserTable.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAuwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:48:12.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:48:12.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "20250901172048_AddPasswordResetTokens.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Migrations\\20250901172048_AddPasswordResetTokens.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Migrations\\20250901172048_AddPasswordResetTokens.cs",
@@ -363,12 +421,11 @@
               "RelativeToolTip": "ClothingStore\\Migrations\\20250901172048_AddPasswordResetTokens.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T17:20:48.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T17:20:48.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Order.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\Order.cs",
@@ -376,12 +433,11 @@
               "RelativeToolTip": "ClothingStore\\Models\\Order.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwBAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:46:46.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T11:46:46.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "OrderViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\OrderViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\OrderViewModel.cs",
@@ -389,12 +445,11 @@
               "RelativeToolTip": "ClothingStore\\ViewModels\\User\\OrderViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T10:25:00.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T10:25:00.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "EditProfileViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\EditProfileViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\EditProfileViewModel.cs",
@@ -402,25 +457,11 @@
               "RelativeToolTip": "ClothingStore\\ViewModels\\User\\EditProfileViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T10:24:03.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T10:24:03.761Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserProfileViewModel.cs",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
-              "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
-              "RelativeToolTip": "ClothingStore\\ViewModels\\User\\UserProfileViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T10:23:27.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Program.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Program.cs",
@@ -428,12 +469,11 @@
               "RelativeToolTip": "ClothingStore\\Program.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAADwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:51:40.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:51:40.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "VwCategoryStat.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\VwCategoryStat.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\VwCategoryStat.cs",
@@ -445,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Controllers\\HomeController.cs",
@@ -453,12 +493,11 @@
               "RelativeToolTip": "ClothingStore\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:58:23.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:58:23.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\Account\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\Account\\LoginViewModel.cs",
@@ -466,12 +505,11 @@
               "RelativeToolTip": "ClothingStore\\ViewModels\\Account\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:32:23.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:32:23.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\Product.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\Product.cs",
@@ -479,12 +517,11 @@
               "RelativeToolTip": "ClothingStore\\Models\\Product.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAA7wAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:37:22.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T11:37:22.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Api.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\Api.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Controllers\\Api.cs",
@@ -492,12 +529,11 @@
               "RelativeToolTip": "ClothingStore\\Controllers\\Api.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAmwI4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:32:01.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:32:01.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Account\\Login.cshtml",
@@ -505,12 +541,11 @@
               "RelativeToolTip": "ClothingStore\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-01T16:49:57.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:49:57.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "snowclothes.css",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\css\\snowclothes.css",
               "RelativeDocumentMoniker": "ClothingStore\\wwwroot\\css\\snowclothes.css",
@@ -518,12 +553,11 @@
               "RelativeToolTip": "ClothingStore\\wwwroot\\css\\snowclothes.css",
               "ViewState": "AgIAAIQEAAAAAAAAAAAAwLAEAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-01T17:58:18.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T17:58:18.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\User.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\User.cs",
@@ -531,12 +565,11 @@
               "RelativeToolTip": "ClothingStore\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T11:44:10.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T11:44:10.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "test-jwt.html",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\test-jwt.html",
               "RelativeDocumentMoniker": "ClothingStore\\wwwroot\\test-jwt.html",
@@ -544,12 +577,11 @@
               "RelativeToolTip": "ClothingStore\\wwwroot\\test-jwt.html",
               "ViewState": "AgIAAFAAAAAAAAAAAAAAwHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-09-02T09:33:07.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:33:07.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "VwProductDetail.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\VwProductDetail.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\VwProductDetail.cs",
@@ -561,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\RefreshToken.cs",
@@ -569,12 +601,11 @@
               "RelativeToolTip": "ClothingStore\\Models\\RefreshToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:22:20.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:22:20.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "JwtLoginResponse.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\JWT\\JwtLoginResponse.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\JWT\\JwtLoginResponse.cs",
@@ -582,12 +613,11 @@
               "RelativeToolTip": "ClothingStore\\ViewModels\\JWT\\JwtLoginResponse.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wBMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:26:51.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:26:51.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "IJwtService.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Services\\IJwtService.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Services\\IJwtService.cs",
@@ -595,25 +625,11 @@
               "RelativeToolTip": "ClothingStore\\Services\\IJwtService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:27:16.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:27:16.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ClothingStore",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
-              "RelativeDocumentMoniker": "ClothingStore\\ClothingStore.csproj",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ClothingStore.csproj",
-              "RelativeToolTip": "ClothingStore\\ClothingStore.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-02T09:42:16.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "PasswordHelper.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Utils\\PasswordHelper.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Utils\\PasswordHelper.cs",
@@ -621,12 +637,11 @@
               "RelativeToolTip": "ClothingStore\\Utils\\PasswordHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:30:27.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:30:27.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "JwtService.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Services\\JwtService.cs",
@@ -634,12 +649,11 @@
               "RelativeToolTip": "ClothingStore\\Services\\JwtService.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAgwA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T09:27:33.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T09:27:33.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Account\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Account\\ForgotPassword.cshtml",
@@ -651,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Account\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Account\\ResetPassword.cshtml",
@@ -663,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\appsettings.json",
               "RelativeDocumentMoniker": "ClothingStore\\appsettings.json",
@@ -671,24 +685,11 @@
               "RelativeToolTip": "ClothingStore\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-01T16:53:47.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T16:53:47.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ClothingStore\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ClothingStore\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAGIBAAAAAAAAAAAQwIkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T16:40:14.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "snowclothes.js",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\js\\snowclothes.js",
               "RelativeDocumentMoniker": "ClothingStore\\wwwroot\\js\\snowclothes.js",
@@ -700,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Home\\Index.cshtml",
@@ -712,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "snowclothes.css",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\css\\snowclothes.css",
               "RelativeDocumentMoniker": "ClothingStore\\wwwroot\\css\\snowclothes.css",
@@ -720,12 +721,11 @@
               "RelativeToolTip": "ClothingStore\\wwwroot\\css\\snowclothes.css",
               "ViewState": "AgIAAIQEAAAAAAAAAAAAAJQEAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-01T17:55:48.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T17:55:48.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "site.css",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "ClothingStore\\wwwroot\\css\\site.css",
@@ -737,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Services\\EmailService.cs",
@@ -749,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Services\\IEmailService.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Services\\IEmailService.cs",
@@ -761,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "PasswordResetToken.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\PasswordResetToken.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\PasswordResetToken.cs",
@@ -773,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Account\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Account\\_ValidationScriptsPartial.cshtml",
@@ -785,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\Account\\Register.cshtml",
@@ -797,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Extensions\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Extensions\\ClaimsPrincipalExtensions.cs",
@@ -809,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "AuthenticationMiddleware.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Middleware\\AuthenticationMiddleware.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Middleware\\AuthenticationMiddleware.cs",
@@ -821,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "ResetPasswordViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\Account\\ResetPasswordViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\Account\\ResetPasswordViewModel.cs",
@@ -833,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "ForgotPasswordViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\Account\\ForgotPasswordViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\Account\\ForgotPasswordViewModel.cs",
@@ -845,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\ViewModels\\Account\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\ViewModels\\Account\\RegisterViewModel.cs",
@@ -857,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Models\\ErrorViewModel.cs",
@@ -871,7 +871,7 @@
         },
         {
           "DockedWidth": 214,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -883,26 +883,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\Orders.cshtml",
+              "RelativeDocumentMoniker": "ClothingStore\\Views\\User\\Orders.cshtml",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\Orders.cshtml",
+              "RelativeToolTip": "ClothingStore\\Views\\User\\Orders.cshtml",
+              "ViewState": "AgIAAHcCAAAAAAAAAAAqwJMCAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T14:29:42.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditProfile.cshtml",
+              "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\EditProfile.cshtml",
+              "RelativeDocumentMoniker": "ClothingStore\\Views\\User\\EditProfile.cshtml",
+              "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\EditProfile.cshtml",
+              "RelativeToolTip": "ClothingStore\\Views\\User\\EditProfile.cshtml",
+              "ViewState": "AgIAALwBAAAAAAAAAAAAAKABAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T14:25:11.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\Profile.cshtml",
               "RelativeDocumentMoniker": "ClothingStore\\Views\\User\\Profile.cshtml",
               "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Views\\User\\Profile.cshtml",
               "RelativeToolTip": "ClothingStore\\Views\\User\\Profile.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-02T10:38:22.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ClothingStore\\Controllers\\UserController.cs",
               "ToolTip": "D:\\D\u1EF1 \u00C1n ri\u00EAng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\Controllers\\UserController.cs",
               "RelativeToolTip": "ClothingStore\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowKAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T10:22:06.324Z",
               "EditorCaption": ""

@@ -1,0 +1,690 @@
+﻿@model List<ClothingStore.ViewModels.User.OrderViewModel>
+@{
+    ViewData["Title"] = "Đơn hàng của tôi";
+    var statusCounts = ViewBag.StatusCounts as Dictionary<string, int> ?? new Dictionary<string, int>();
+    var currentStatus = ViewBag.CurrentStatus?.ToString() ?? "all";
+}
+
+<div class="orders-page">
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="header-content">
+                <div class="header-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="header-text">
+                    <h1>Đơn hàng của tôi</h1>
+                    <p>Theo dõi và quản lý tất cả đơn hàng của bạn</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number">@Model.Count</span>
+                    <span class="stat-label">Tổng đơn hàng</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Filter -->
+        <div class="status-filter">
+            <div class="filter-tabs">
+                <a href="@Url.Action("Orders", "User", new { status = "all" })"
+                   class="filter-tab @(currentStatus == "all" ? "active" : "")">
+                    <i class="fas fa-list"></i>
+                    <span>Tất cả</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("all", 0)</span>
+                </a>
+                <a href="@Url.Action("Orders", "User", new { status = "pending" })"
+                   class="filter-tab @(currentStatus == "pending" ? "active" : "")">
+                    <i class="fas fa-clock"></i>
+                    <span>Chờ xử lý</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("pending", 0)</span>
+                </a>
+                <a href="@Url.Action("Orders", "User", new { status = "paid" })"
+                   class="filter-tab @(currentStatus == "paid" ? "active" : "")">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Đã thanh toán</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("paid", 0)</span>
+                </a>
+                <a href="@Url.Action("Orders", "User", new { status = "shipped" })"
+                   class="filter-tab @(currentStatus == "shipped" ? "active" : "")">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Đang giao</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("shipped", 0)</span>
+                </a>
+                <a href="@Url.Action("Orders", "User", new { status = "delivered" })"
+                   class="filter-tab @(currentStatus == "delivered" ? "active" : "")">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Đã giao</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("delivered", 0)</span>
+                </a>
+                <a href="@Url.Action("Orders", "User", new { status = "cancelled" })"
+                   class="filter-tab @(currentStatus == "cancelled" ? "active" : "")">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Đã hủy</span>
+                    <span class="tab-count">@statusCounts.GetValueOrDefault("cancelled", 0)</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-list">
+            @if (Model.Any())
+            {
+                @foreach (var order in Model)
+                {
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <h3 class="order-id">
+                                    <i class="fas fa-receipt"></i>
+                                    Đơn hàng #@order.Id
+                                </h3>
+                                <span class="order-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    @order.OrderDate.ToString("dd/MM/yyyy HH:mm")
+                                </span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status-badge status-@order.Status.ToLower()">
+                                    @GetStatusText(order.Status)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="order-body">
+                            <div class="order-items">
+                                @foreach (var item in order.Items.Take(3))
+                                {
+                                    <div class="order-item">
+                                        <img src="@item.ImageUrl" alt="@item.ProductName" class="item-image">
+                                        <div class="item-info">
+                                            <h4 class="item-name">@item.ProductName</h4>
+                                            <div class="item-details">
+                                                <span class="item-price">@item.Price.ToString("N0")₫</span>
+                                                <span class="item-quantity">x @item.Quantity</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                @if (order.Items.Count > 3)
+                                {
+                                    <div class="more-items">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                        và @(order.Items.Count - 3) sản phẩm khác
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="order-footer">
+                            <div class="order-summary">
+                                <span class="total-label">Tổng cộng:</span>
+                                <span class="total-amount">@order.TotalAmount.ToString("N0")₫</span>
+                            </div>
+                            <div class="order-actions">
+                                <a href="@Url.Action("OrderDetail", "User", new { id = order.Id })" class="view-detail-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Xem chi tiết
+                                </a>
+                                @if (order.Status == "Delivered")
+                                {
+                                    <button class="reorder-btn">
+                                        <i class="fas fa-redo"></i>
+                                        Mua lại
+                                    </button>
+                                }
+                                @if (order.Status == "Pending")
+                                {
+                                    <button class="cancel-order-btn">
+                                        <i class="fas fa-times"></i>
+                                        Hủy đơn
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Chưa có đơn hàng nào</h3>
+                    <p>Bạn chưa có đơn hàng nào. Hãy khám phá các sản phẩm tuyệt vời của chúng tôi!</p>
+                    <a href="@Url.Action("Index", "Home")" class="shop-now-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Mua sắm ngay
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@functions {
+    string GetStatusText(string status)
+    {
+        return status switch
+        {
+            "Pending" => "Chờ xử lý",
+            "Paid" => "Đã thanh toán",
+            "Shipped" => "Đang giao",
+            "Delivered" => "Đã giao",
+            "Cancelled" => "Đã hủy",
+            _ => status
+        };
+    }
+}
+
+<style>
+    .orders-page {
+        background: var(--light-gray);
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .page-header {
+        background: var(--snow-white);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .header-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--snow-white);
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+        color: var(--deep-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    .header-text p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .header-stats {
+        text-align: center;
+    }
+
+    .stat-item {
+        padding: 1rem;
+        background: var(--ice-blue);
+        border-radius: 12px;
+        min-width: 120px;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--winter-blue);
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+
+    .status-filter {
+        background: var(--snow-white);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-light);
+    }
+
+    .filter-tabs {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .filter-tab {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.2rem;
+        background: var(--ice-blue);
+        border: 2px solid var(--frost-blue);
+        border-radius: 25px;
+        color: var(--deep-blue);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .filter-tab:hover, .filter-tab.active {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        border-color: var(--winter-blue);
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .tab-count {
+        background: rgba(255, 255, 255, 0.3);
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .filter-tab.active .tab-count {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .orders-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .order-card {
+        background: var(--snow-white);
+        border-radius: 12px;
+        box-shadow: var(--shadow-light);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .order-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        background: var(--ice-blue);
+        border-bottom: 1px solid var(--frost-blue);
+    }
+
+    .order-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .order-id {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+        margin: 0;
+    }
+
+    .order-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-light);
+        font-size: 0.95rem;
+    }
+
+    .status-badge {
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .status-pending {
+        background: rgba(255, 152, 0, 0.1);
+        color: #ff9800;
+        border: 1px solid rgba(255, 152, 0, 0.3);
+    }
+
+    .status-paid {
+        background: rgba(33, 150, 243, 0.1);
+        color: #2196f3;
+        border: 1px solid rgba(33, 150, 243, 0.3);
+    }
+
+    .status-shipped {
+        background: rgba(74, 144, 226, 0.1);
+        color: var(--winter-blue);
+        border: 1px solid rgba(74, 144, 226, 0.3);
+    }
+
+    .status-delivered {
+        background: rgba(76, 175, 80, 0.1);
+        color: #4caf50;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+
+    .status-cancelled {
+        background: rgba(244, 67, 54, 0.1);
+        color: #f44336;
+        border: 1px solid rgba(244, 67, 54, 0.3);
+    }
+
+    .order-body {
+        padding: 1.5rem;
+    }
+
+    .order-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .order-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem;
+        background: var(--ice-blue);
+        border-radius: 8px;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .item-info {
+        flex: 1;
+    }
+
+    .item-name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        margin: 0 0 0.3rem 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .item-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-price {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--winter-blue);
+    }
+
+    .item-quantity {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    .more-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        color: var(--text-light);
+        font-style: italic;
+        text-align: center;
+    }
+
+    .order-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        background: var(--light-gray);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .order-summary {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .total-label {
+        font-size: 1rem;
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+
+    .total-amount {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--winter-blue);
+    }
+
+    .order-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .view-detail-btn, .reorder-btn, .cancel-order-btn {
+        padding: 0.6rem 1.2rem;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .view-detail-btn {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+    }
+
+    .view-detail-btn:hover {
+        background: var(--deep-blue);
+        text-decoration: none;
+        color: var(--snow-white);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .reorder-btn {
+        background: var(--success-green);
+        color: var(--snow-white);
+    }
+
+    .reorder-btn:hover {
+        background: #00a693;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .cancel-order-btn {
+        background: var(--danger-red);
+        color: var(--snow-white);
+    }
+
+    .cancel-order-btn:hover {
+        background: #d32f2f;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: var(--snow-white);
+        border-radius: 12px;
+        box-shadow: var(--shadow-light);
+    }
+
+    .empty-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        color: var(--frost-blue);
+    }
+
+    .empty-state h3 {
+        color: var(--deep-blue);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .empty-state p {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .shop-now-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .shop-now-btn:hover {
+        background: var(--deep-blue);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-medium);
+        text-decoration: none;
+        color: var(--snow-white);
+    }
+
+    /* Responsive Design */
+    @@media (max-width: 992px) {
+        .page-header {
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .filter-tabs {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .order-footer {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .order-actions {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .orders-page {
+            padding: 1rem 0;
+        }
+
+        .page-header {
+            padding: 1.5rem;
+        }
+
+        .header-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+        }
+
+        .order-header {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .filter-tabs {
+            flex-direction: column;
+        }
+
+        .filter-tab {
+            justify-content: center;
+        }
+
+        .order-item {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .item-details {
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+
+    @@media (max-width: 576px) {
+        .order-actions {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .view-detail-btn, .reorder-btn, .cancel-order-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .stat-item {
+            min-width: auto;
+            width: 100%;
+        }
+    }
+</style>

@@ -18,8 +18,8 @@ namespace ClothingStore.Controllers
             _context = context;
         }
 
-        // GET: User/Profile
-        public async Task<IActionResult> Profile()
+        // GET: User/Profile - Updated to support section parameter
+        public async Task<IActionResult> Profile(string section = "profile")
         {
             var userId = GetCurrentUserId();
             var user = await _context.Users
@@ -48,10 +48,11 @@ namespace ClothingStore.Controllers
                 MembershipLevel = GetMembershipLevel(totalSpent)
             };
 
+            ViewBag.CurrentSection = section;
             return View(userProfile);
         }
 
-        // GET: User/Orders
+        // GET: User/Orders - Keep for backward compatibility
         public async Task<IActionResult> Orders(string status = "all")
         {
             var userId = GetCurrentUserId();
@@ -78,7 +79,7 @@ namespace ClothingStore.Controllers
                     {
                         ProductId = oi.Product.ProductId.ToString(),
                         ProductName = oi.Product.ProductName,
-                        ImageUrl = oi.Product.ProductImages.OrderByDescending(pi => pi.IsPrimary) // ưu tiên ảnh chính
+                        ImageUrl = oi.Product.ProductImages.OrderByDescending(pi => pi.IsPrimary)
                         .Select(pi => pi.ImageUrl)
                         .FirstOrDefault()
                         ?? "https://via.placeholder.com/150x150",
@@ -92,6 +93,87 @@ namespace ClothingStore.Controllers
             ViewBag.StatusCounts = await GetOrderStatusCounts(userId);
 
             return View(orders);
+        }
+
+        // NEW: AJAX endpoint for orders partial view
+        [HttpGet]
+        public async Task<IActionResult> GetOrdersPartial(string status = "all")
+        {
+            var userId = GetCurrentUserId();
+            var ordersQuery = _context.Orders
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .ThenInclude(p => p.ProductImages)
+                .Where(o => o.UserId == userId);
+
+            if (!string.IsNullOrEmpty(status) && status != "all")
+            {
+                ordersQuery = ordersQuery.Where(o => o.Status.ToLower() == status.ToLower());
+            }
+
+            var orders = await ordersQuery
+                .OrderByDescending(o => o.OrderDate)
+                .Select(o => new OrderViewModel
+                {
+                    Id = o.Id.ToString(),
+                    OrderDate = o.OrderDate,
+                    Status = o.Status,
+                    TotalAmount = o.TotalAmount,
+                    ItemCount = o.OrderItems.Count,
+                    Items = o.OrderItems.Select(oi => new OrderItemViewModel
+                    {
+                        ProductId = oi.Product.ProductId.ToString(),
+                        ProductName = oi.Product.ProductName,
+                        ImageUrl = oi.Product.ProductImages.OrderByDescending(pi => pi.IsPrimary)
+                        .Select(pi => pi.ImageUrl)
+                        .FirstOrDefault()
+                        ?? "https://via.placeholder.com/150x150",
+                        Price = oi.UnitPrice,
+                        Quantity = oi.Quantity
+                    }).ToList()
+                })
+                .ToListAsync();
+
+            ViewBag.CurrentStatus = status;
+            ViewBag.StatusCounts = await GetOrderStatusCounts(userId);
+
+            return PartialView("_OrdersPartial", orders);
+        }
+
+        // NEW: AJAX endpoints for other sections (placeholders)
+        [HttpGet]
+        public async Task<IActionResult> GetFavoritesPartial()
+        {
+            // Implementation for favorites
+            return PartialView("_FavoritesPartial");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAddressesPartial()
+        {
+            // Implementation for addresses
+            return PartialView("_AddressesPartial");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetPaymentMethodsPartial()
+        {
+            // Implementation for payment methods
+            return PartialView("_PaymentMethodsPartial");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetNotificationsPartial()
+        {
+            // Implementation for notifications
+            return PartialView("_NotificationsPartial");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetSettingsPartial()
+        {
+            // Implementation for settings
+            return PartialView("_SettingsPartial");
         }
 
         // GET: User/OrderDetail/5
@@ -117,7 +199,7 @@ namespace ClothingStore.Controllers
                         ProductId = oi.Product.ProductId.ToString(),
                         ProductName = oi.Product.ProductName,
                         ImageUrl = oi.Product.ProductImages
-                            .OrderByDescending(pi => pi.IsPrimary) // ưu tiên ảnh chính
+                            .OrderByDescending(pi => pi.IsPrimary)
                             .Select(pi => pi.ImageUrl)
                             .FirstOrDefault()
                             ?? "https://via.placeholder.com/150x150",
@@ -241,8 +323,4 @@ namespace ClothingStore.Controllers
             return result;
         }
     }
-
-
-
-   
 }

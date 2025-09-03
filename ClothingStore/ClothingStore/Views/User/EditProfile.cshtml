@@ -1,0 +1,445 @@
+﻿@model ClothingStore.ViewModels.User.EditProfileViewModel
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin cá nhân";
+}
+
+<div class="edit-profile-page">
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-nav">
+            <a href="@Url.Action("Profile", "User")" class="breadcrumb-link">
+                <i class="fas fa-arrow-left"></i>
+                Quay lại thông tin cá nhân
+            </a>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="header-icon">
+                <i class="fas fa-user-edit"></i>
+            </div>
+            <div class="header-text">
+                <h1>Chỉnh sửa thông tin cá nhân</h1>
+                <p>Cập nhật thông tin để đảm bảo tài khoản của bạn luôn chính xác</p>
+            </div>
+        </div>
+
+        <!-- Edit Form -->
+        <div class="edit-form-container">
+            <form asp-action="EditProfile" method="post" class="edit-form">
+                @Html.AntiForgeryToken()
+
+                <!-- Avatar Section -->
+                <div class="avatar-section">
+                    <div class="current-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="avatar-info">
+                        <h3>Ảnh đại diện</h3>
+                        <p>Ảnh đại diện giúp bạn dễ dàng nhận diện trong hệ thống</p>
+                        <button type="button" class="change-avatar-btn">
+                            <i class="fas fa-camera"></i>
+                            Thay đổi ảnh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        Thông tin cơ bản
+                    </h3>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label asp-for="FullName" class="form-label">
+                                <i class="fas fa-user"></i>
+                                Họ và tên *
+                            </label>
+                            <input asp-for="FullName" class="form-input" placeholder="Nhập họ và tên">
+                            <span asp-validation-for="FullName" class="validation-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email" class="form-label">
+                                <i class="fas fa-envelope"></i>
+                                Email *
+                            </label>
+                            <input asp-for="Email" class="form-input" placeholder="Nhập địa chỉ email">
+                            <span asp-validation-for="Email" class="validation-error"></span>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label asp-for="Phone" class="form-label">
+                                <i class="fas fa-phone"></i>
+                                Số điện thoại
+                            </label>
+                            <input asp-for="Phone" class="form-input" placeholder="Nhập số điện thoại">
+                            <span asp-validation-for="Phone" class="validation-error"></span>
+                            <div class="input-help">
+                                <i class="fas fa-info-circle"></i>
+                                Số điện thoại sẽ được sử dụng để liên hệ khi cần thiết
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <a href="@Url.Action("Profile", "User")" class="cancel-btn">
+                        <i class="fas fa-times"></i>
+                        Hủy bỏ
+                    </a>
+                    <button type="submit" class="save-btn">
+                        <i class="fas fa-save"></i>
+                        Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .edit-profile-page {
+        background: var(--light-gray);
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .breadcrumb-nav {
+        margin-bottom: 2rem;
+    }
+
+    .breadcrumb-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--winter-blue);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0;
+    }
+
+    .breadcrumb-link:hover {
+        color: var(--deep-blue);
+        text-decoration: none;
+        transform: translateX(-3px);
+    }
+
+    .page-header {
+        background: var(--snow-white);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-light);
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .header-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--snow-white);
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+        color: var(--deep-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    .header-text p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .edit-form-container {
+        background: var(--snow-white);
+        border-radius: 12px;
+        box-shadow: var(--shadow-light);
+        overflow: hidden;
+    }
+
+    .edit-form {
+        padding: 2rem;
+    }
+
+    .avatar-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        background: var(--ice-blue);
+        border-radius: 12px;
+        margin-bottom: 2rem;
+    }
+
+    .current-avatar {
+        width: 100px;
+        height: 100px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--snow-white);
+        font-size: 3rem;
+        flex-shrink: 0;
+        position: relative;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .avatar-info h3 {
+        color: var(--deep-blue);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .avatar-info p {
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .change-avatar-btn {
+        background: var(--winter-blue);
+        color: var(--snow-white);
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+
+    .change-avatar-btn:hover {
+        background: var(--deep-blue);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .form-section {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--deep-blue);
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--ice-blue);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+    }
+
+    .form-label i {
+        color: var(--winter-blue);
+        width: 16px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 2px solid var(--frost-blue);
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: var(--snow-white);
+        color: var(--text-dark);
+    }
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--winter-blue);
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        background: var(--snow-white);
+    }
+
+    .form-input::placeholder {
+        color: var(--text-light);
+    }
+
+    .validation-error {
+        color: var(--danger-red);
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+
+    .input-help {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--text-light);
+    }
+
+    .input-help i {
+        color: var(--winter-blue);
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        border-top: 1px solid var(--ice-blue);
+        gap: 1rem;
+    }
+
+    .cancel-btn {
+        background: var(--silver);
+        color: var(--text-dark);
+        border: 2px solid var(--border-color);
+        padding: 0.8rem 2rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+
+    .cancel-btn:hover {
+        background: var(--border-color);
+        text-decoration: none;
+        color: var(--text-dark);
+        transform: translateY(-1px);
+    }
+
+    .save-btn {
+        background: var(--gradient-primary);
+        color: var(--snow-white);
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .save-btn:hover {
+        background: var(--deep-blue);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    /* Responsive Design */
+    @@media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .header-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+        }
+
+        .avatar-section {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .form-actions {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-actions .cancel-btn,
+        .form-actions .save-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    @@media (max-width: 576px) {
+        .edit-profile-page {
+            padding: 1rem 0;
+        }
+
+        .page-header {
+            padding: 1.5rem;
+        }
+
+        .edit-form {
+            padding: 1.5rem;
+        }
+
+        .avatar-section {
+            padding: 1.5rem;
+        }
+
+        .current-avatar {
+            width: 80px;
+            height: 80px;
+            font-size: 2rem;
+        }
+    }
