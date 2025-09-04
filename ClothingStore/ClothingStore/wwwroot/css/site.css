@@ -54,3 +54,49 @@ body {
 .alert {
     margin-bottom: 1rem;
 }
+.btn-primary, .btn-secondary, .btn-outline-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+    color: #0077cc;
+}
+
+    .btn-outline-primary:hover {
+        text-decoration: none;
+        color: var(--snow-white);
+        transform: translateY(-2px);
+    }
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--snow-white);
+}
+
+    .btn-primary:hover {
+        background: var(--deep-blue);
+        text-decoration: none;
+        color: var(--snow-white);
+        transform: translateY(-2px);
+    }
+
+.btn-secondary {
+    background: var(--ice-blue);
+    color: var(--deep-blue);
+    border: 2px solid var(--frost-blue);
+}
+
+    .btn-secondary:hover {
+        background: var(--frost-blue);
+        text-decoration: none;
+        color: var(--deep-blue);
+        transform: translateY(-2px);
+    }
+        

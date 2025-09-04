@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ClothingStore.bundle.scp.css"
     },
     {
+      "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
       "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +19,14 @@
     {
       "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\js\\jwt-auth.js",
+      "PackagePath": "staticwebassets\\js\\jwt-auth.js"
     },
     {
       "Id": "D:\\Dự Án riêng\\SnowStore\\SnowStore\\ClothingStore\\ClothingStore\\wwwroot\\js\\site.js",

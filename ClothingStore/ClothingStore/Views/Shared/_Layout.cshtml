@@ -7,79 +7,103 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/snowclothes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ClothingStore.styles.css" asp-append-version="true" />
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <script>
         const scrollEffectsCSS = `
-            .navbar.sticky {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-            }
+                    .navbar.sticky {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1000;
+                        background: rgba(255, 255, 255, 0.95);
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                        transition: all 0.3s ease;
+                    }
 
-            #backToTop {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                background: var(--winter-blue);
-                color: white;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                display: none;
-                opacity: 0;
-                transition: all 0.3s ease;
-                z-index: 1000;
-            }
+                    #backToTop {
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        width: 50px;
+                        height: 50px;
+                        background: var(--winter-blue);
+                        color: white;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        display: none;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        z-index: 1000;
+                    }
 
-            #backToTop:hover {
-                background: var(--deep-blue);
-                transform: translateY(-2px);
-            }
+                    #backToTop:hover {
+                        background: var(--deep-blue);
+                        transform: translateY(-2px);
+                    }
 
-            #scrollProgress {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 3px;
-                background: var(--winter-blue);
-                z-index: 1001;
-                transition: width 0.1s ease;
-            }
+                    #scrollProgress {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        height: 3px;
+                        background: var(--winter-blue);
+                        z-index: 1001;
+                        transition: width 0.1s ease;
+                    }
 
-            .fade-on-scroll {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.6s ease;
-            }
+                    .fade-on-scroll {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: all 0.6s ease;
+                    }
 
-            .fade-on-scroll.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
+                    .fade-on-scroll.visible {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
 
-            .categories-section.compact {
-                transform: scale(0.9);
-                opacity: 0.8;
-                transition: all 0.3s ease;
-            }
-        `;
+                    .categories-section.compact {
+                        transform: scale(0.9);
+                        opacity: 0.8;
+                        transition: all 0.3s ease;
+                    }
+
+                    .cart-count-circle {
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        width: 20px;
+                        height: 20px;
+                        background-color: red;
+                        color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 12px;
+                        line-height: 20px;
+                        z-index: 1;
+                    }
+                `;
         const scrollStyle = document.createElement('style');
         scrollStyle.textContent = scrollEffectsCSS;
-        Document.head.appendChild(scrollStyle);
+        document.head.appendChild(scrollStyle);
     </script>
 </head>
 <body>
+    <!-- User authentication indicator for JavaScript -->
+    @if (User.Identity.IsAuthenticated)
+    {
+        <span class="d-none user-authenticated"></span>
+    }
+
     <header>
         <!-- Top Header -->
         <div class="top-header">
@@ -124,11 +148,59 @@
 
                     <!-- User Actions -->
                     <div class="user-actions">
+                        <!-- Updated Cart Section -->
                         <div class="cart-section">
-                            <a href="#" class="cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span class="cart-count">0</span>
-                            </a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <!-- Cart Dropdown for authenticated users -->
+                                <div class="dropdown">
+                                    <a class="cart-btn dropdown-toggle" href="#" role="button" id="cartDropdown"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="cart-count-circle d-none">0</span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end cart-dropdown p-0 shadow"
+                                         style="min-width: 350px;" aria-labelledby="cartDropdown">
+                                        <div class="dropdown-header bg-primary text-white">
+                                            <h6 class="mb-0">
+                                                <i class="fas fa-shopping-cart me-2"></i>Giỏ hàng của bạn
+                                            </h6>
+                                        </div>
+
+                                        <div id="mini-cart-content">
+                                            <div class="p-3 text-center text-muted">
+                                                <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                                                <p class="mb-0">Giỏ hàng trống</p>
+                                                <small>Hãy thêm sản phẩm vào giỏ hàng!</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-footer bg-light p-2">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <small>Tổng cộng:</small>
+                                                <small class="fw-bold text-primary cart-total">0₫</small>
+                                            </div>
+                                            <div class="d-grid gap-1">
+                                                <a href="@Url.Action("Index", "Cart")" class="btn btn-outline-primary btn-sm">
+                                                    <i class="fas fa-shopping-cart me-1"></i>Xem giỏ hàng
+                                                </a>
+                                                <a href="@Url.Action("Checkout", "Cart")" class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-credit-card me-1"></i>Thanh toán
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <!-- Simple cart link for non-authenticated users -->
+                                <a href="@Url.Action("Index", "Cart")" class="cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="d-none d-md-inline ms-1">Giỏ hàng</span>
+                                </a>
+                            }
                         </div>
 
                         @if (User.Identity.IsAuthenticated)
@@ -141,7 +213,7 @@
                                 <ul class="dropdown-menu user-dropdown">
                                     <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Profile"><i class="fas fa-user-circle"></i> Thông tin cá nhân</a></li>
                                     <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Orders"><i class="fas fa-box"></i> Đơn hàng của tôi</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Profile"><i class="fas fa-heart"></i> Yêu thích</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Profile" asp-route-section="favorites"><i class="fas fa-heart"></i> Yêu thích</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li>
                                         <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline w-100">
@@ -258,10 +330,95 @@
         </div>
     </footer>
 
+    <!-- Loading overlay for cart operations -->
+    <div id="loading-overlay" class="position-fixed w-100 h-100 top-0 start-0 d-none"
+         style="background: rgba(0,0,0,0.5); z-index: 9999;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Đang tải...</span>
+            </div>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/snowclothes.js" asp-append-version="true"></script>
+    <script src="~/js/cart.js" asp-append-version="true"></script>
+
+    <script>
+        // Cart dropdown functionality
+        $(document).ready(function () {
+            // Load mini cart content when dropdown is shown
+            $('#cartDropdown').on('show.bs.dropdown', function () {
+                loadMiniCartContent();
+            });
+
+            function loadMiniCartContent() {
+                if (!$('.user-authenticated').length) return;
+
+                $.ajax({
+                    url: '/Cart/GetCartCount',
+                    method: 'GET',
+                    success: function (response) {
+                        if (response.cartCount > 0) {
+                            $('#mini-cart-content').html(`
+                                <div class="p-2">
+                                    <div class="text-center">
+                                        <p class="mb-1"><strong>${response.cartCount}</strong> sản phẩm trong giỏ</p>
+                                        <small class="text-muted">Xem chi tiết để biết thêm thông tin</small>
+                                    </div>
+                                </div>
+                            `);
+                        } else {
+                            showEmptyCart();
+                        }
+                        // ĐẢM BẢO cập nhật badge mỗi lần load
+                        updateCartBadge(response.cartCount);
+                    },
+                    error: function () {
+                        showEmptyCart();
+                    }
+                });
+            }
+
+            function showEmptyCart() {
+                $('#mini-cart-content').html(`
+                                    <div class="p-3 text-center text-muted">
+                                        <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                                        <p class="mb-0">Giỏ hàng trống</p>
+                                        <small>Hãy thêm sản phẩm vào giỏ hàng!</small>
+                                    </div>
+                                `);
+            }
+
+            // Update cart count on page load
+            if ($('.user-authenticated').length) {
+                updateCartCount();
+            }
+
+            function updateCartCount() {
+                $.ajax({
+                    url: '/Cart/GetCartCount',
+                    method: 'GET',
+                    success: function (response) {
+                        updateCartBadge(response.cartCount);
+                    }
+                });
+            }
+
+            function updateCartBadge(count) {
+                const badge = $('.cart-count-circle');
+                if (count > 0) {
+                    badge.text(count).removeClass('d-none');
+                } else {
+                    badge.addClass('d-none');
+                }
+            }
+
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

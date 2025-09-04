@@ -1,0 +1,85 @@
+﻿@* Mini Cart Summary for Header/Navbar *@
+<div class="dropdown">
+    <a class="nav-link position-relative" href="#" role="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge"
+              style="display: none; font-size: 0.7rem;">0</span>
+        <span class="d-none d-md-inline ms-1">Giỏ hàng</span>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-end p-0 shadow" style="min-width: 350px;" aria-labelledby="cartDropdown">
+        <div class="dropdown-header bg-primary text-white">
+            <h6 class="mb-0">Giỏ hàng của bạn</h6>
+        </div>
+
+        <div id="mini-cart-content">
+            <div class="p-3 text-center text-muted">
+                <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                <p class="mb-0">Giỏ hàng trống</p>
+            </div>
+        </div>
+
+        <div class="dropdown-footer bg-light p-2">
+            <div class="d-flex justify-content-between mb-2">
+                <small>Tổng cộng:</small>
+                <small class="fw-bold text-primary cart-total">0₫</small>
+            </div>
+            <div class="d-grid gap-1">
+                <a href="@Url.Action("Index", "Cart")" class="btn btn-outline-primary btn-sm">
+                    <i class="fas fa-shopping-cart me-1"></i>Xem giỏ hàng
+                </a>
+                <a href="@Url.Action("Checkout", "Cart")" class="btn btn-primary btn-sm">
+                    <i class="fas fa-credit-card me-1"></i>Thanh toán
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Load mini cart content when dropdown is shown
+        $('#cartDropdown').on('show.bs.dropdown', function () {
+            loadMiniCartContent();
+        });
+
+        function loadMiniCartContent() {
+            $.ajax({
+                url: '/Cart/GetCartCount',
+                method: 'GET',
+                success: function (response) {
+                    if (response.cartCount > 0) {
+                        loadFullCartSummary();
+                    } else {
+                        showEmptyCart();
+                    }
+                }
+            });
+        }
+
+        function loadFullCartSummary() {
+            // You can create a separate endpoint for mini cart summary
+            // For now, we'll use a simple approach
+            $('#mini-cart-content').html(`
+                <div class="p-2">
+                    <div class="text-center">
+                        <small class="text-muted">Có sản phẩm trong giỏ hàng</small>
+                        <div class="mt-2">
+                            <a href="/Cart" class="btn btn-sm btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            `);
+        }
+
+        function showEmptyCart() {
+            $('#mini-cart-content').html(`
+                <div class="p-3 text-center text-muted">
+                    <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                    <p class="mb-0">Giỏ hàng trống</p>
+                    <small>Hãy thêm sản phẩm vào giỏ hàng!</small>
+                </div>
+            `);
+        }
+    });
+</script>

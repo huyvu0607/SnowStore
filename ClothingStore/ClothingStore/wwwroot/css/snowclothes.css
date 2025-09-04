@@ -317,6 +317,7 @@ body {
         text-decoration: none;
         transform: translateY(-1px);
         box-shadow: var(--shadow-medium);
+        color: var(--snow-white);
     }
 
 /* Navigation */
@@ -503,7 +504,9 @@ body {
     .product-card:hover::before {
         opacity: 0.1;
     }
-/*.product-overlay {
+
+
+.product-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -517,7 +520,7 @@ body {
     justify-content: center;
     border-radius: 15px;
     z-index: 5;
-}*/
+}
 /*.overlay-actions {
     transform: translateY(20px);
     transition: transform 0.3s ease;
@@ -617,13 +620,22 @@ body {
 }
 
 .view-btn {
-    background: var(--gradient-primary);
-    color: var(--snow-white);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--deep-blue, #2c5aa0);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 4; /* Đảm bảo nút view nằm trên overlay */
+    pointer-events: auto; /* Luôn cho phép click vào nút */
 }
 
     .view-btn:hover {
-        background: var(--deep-blue);
+        background: white;
         transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
 /* Product Popup */
